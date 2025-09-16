@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/librosfragment">
+
+    <fragment
+        android:id="@+id/librosfragment"
+        android:name="com.example.eval_final_mod4.LibrosFragment"
+        android:label="Libros"
+        tools:layout="@layout/fragment_libros">
+    </fragment>
+
+    <fragment
+        android:id="@+id/carritofragment"
+        android:name="com.example.eval_final_mod4.CarritoFragment"
+        android:label="Carrito">
+        <argument
+            android:name="titulo"
+            app:argType="string"
+            android:defaultValue=""/>
+        <argument
+            android:name="autor"
+            app:argType="string"
+            android:defaultValue=""/>
+        <argument
+            android:name="precio"
+            app:argType="integer"
+            android:defaultValue="0"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/descripcionfragment"
+        android:name="com.example.eval_final_mod4.DescripcionFragment"
+        android:label="Descripción">
+        <argument
+            android:name="titulo"
+            app:argType="string"
+            android:defaultValue=""/>
+        <argument
+            android:name="autor"
+            app:argType="string"
+            android:defaultValue=""/>
+        <argument
+            android:name="descripcion"
+            app:argType="string"
+            android:defaultValue=""/>
+        <argument
+            android:name="imagen"
+            app:argType="integer"
+            android:defaultValue="0"/>
+    </fragment>
+
+</navigation>
