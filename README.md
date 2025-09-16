@@ -1,37 +1,46 @@
-# evaluacion final mod 4 
-Título del proyecto
-App de Libros
-Una aplicación móvil desarrollada en Android Studio que simula una tienda de libros. Permite a los usuarios navegar por un catálogo de libros, ver descripciones detalladas y agregar libros a un carrito de compras virtual.
+#evaluacion final mod 4
+##App de Libros
+Una aplicación móvil desarrollada en Android Studio que simula una tienda de libros. Permite a los usuarios navegar por un catálogo, ver descripciones detalladas y agregar libros a un carrito de compras virtual.
 
-Características de la aplicación
-📚 Catálogo de Libros: Muestra una lista de libros con sus títulos, autores e imágenes en un RecyclerView.
-📖 Vista de Detalle: Al seleccionar un libro, se navega a una nueva pantalla que muestra su descripción completa.
-🛒 Carrito de Compras: Los usuarios pueden agregar libros a un carrito. El carrito muestra la lista de ítems, el total de libros y el precio total.
-➡️ Navegación: La aplicación utiliza el componente de navegación de Android (Navigation Component) y una barra de navegación inferior (BottomNavigationView) para moverse entre las diferentes pantallas.
+## Características de la aplicación 📖
+### Catálogo de Libros: Muestra una lista de libros con sus títulos, autores e imágenes en un RecyclerView.
 
-Estructura y Funcionamiento del Proyecto
+### Vista de Detalle: Al seleccionar un libro, se navega a una nueva pantalla que muestra su descripción completa.
+
+### Carrito de Compras: Los usuarios pueden agregar libros a un carrito. El carrito muestra la cantidad total de ítems y el precio total.
+
+### Navegación: La aplicación utiliza el componente de navegación de Android (Navigation Component) y una barra de navegación inferior (BottomNavigationView) para moverse entre las diferentes pantallas.
+
+Estructura y funcionamiento del proyecto ⚙️
 El proyecto se basa en la arquitectura de Fragmentos y el Navigation Component para gestionar las pantallas de la aplicación.
 
-MainActivity.java: La actividad principal que configura la navegación. Utiliza el NavHostFragment para albergar los fragmentos y conecta la BottomNavigationView para manejar la navegación entre LibrosFragment, CarritoFragment y DescripcionFragment.
+MainActivity.java: La actividad principal que configura la navegación y la BottomNavigationView.
 
-LibrosFragment.java: Este fragmento muestra la lista principal de libros. Utiliza un RecyclerView y el LibroAdapter para poblar la vista. Cuando un usuario hace clic en un libro, se navega al DescripcionFragment, y cuando se hace clic en el botón "Agregar", se añade el libro al carrito.
+LibrosFragment.java: Fragmento que muestra la lista de libros y maneja la navegación a la descripción y la adición al carrito.
 
-DescripcionFragment.java: Muestra los detalles de un libro específico. Recibe los datos (título, autor, descripción, etc.) a través de argumentos de navegación (Bundle).
+DescripcionFragment.java: Muestra los detalles de un libro, recibiendo los datos a través de argumentos de navegación (Bundle).
 
-CarritoFragment.java: Muestra los libros agregados por el usuario. También utiliza un RecyclerView con su propio CarritoAdapter. Calcula y muestra la cantidad total de libros y el precio total.
+CarritoFragment.java: Fragmento que muestra la lista de libros en el carrito, junto con el total de ítems y el precio.
 
-Libro.java y Carrito.java: Son clases POJO (Plain Old Java Object) que modelan los datos de un libro y un ítem en el carrito, respectivamente.
+Libro.java y Carrito.java: Clases de modelo que representan un libro y un ítem del carrito.
 
-LibroAdapter.java y CarritoAdapter.java: Son adaptadores para los RecyclerViews. Son responsables de inflar las vistas de los ítems y de vincular los datos del modelo a las vistas (onBindViewHolder).
+LibroAdapter.java y CarritoAdapter.java: Adaptadores para los RecyclerViews que enlazan los datos con la interfaz de usuario.
 
-CarritoManager.java: Implementado como un Singleton para gestionar el estado del carrito de compras. Esta decisión permite que el carrito sea accesible desde cualquier parte de la aplicación (por ejemplo, desde el LibroAdapter), aunque se reconoce que una solución con ViewModel sería una mejor práctica para manejar el ciclo de vida y evitar fugas de memoria en aplicaciones más complejas.
+CarritoManager.java: Implementado como un Singleton para gestionar el estado del carrito de compras.
 
-Cómo ejecutar el proyecto
+Decisiones de diseño 💡
+La aplicación se diseñó con un enfoque en la modularidad, utilizando fragmentos para separar la interfaz de usuario. Se usó Data Binding y View Binding para acceder a las vistas de manera segura y eficiente, reduciendo el riesgo de errores.
+
+La decisión de usar un Singleton para el CarritoManager fue una elección pragmática para la simplicidad de este proyecto. Sin embargo, en aplicaciones más grandes, una mejor práctica sería utilizar un ViewModel para gestionar los datos de la interfaz de usuario, lo que ayudaría a prevenir fugas de memoria y a mejorar el manejo del ciclo de vida de los datos.
+
+Cómo ejecutar el proyecto 🚀
 Para correr el proyecto, necesitas tener Android Studio instalado.
 
 Clonar el repositorio:
-git clone https://github.com/tu-usuario/nombre-del-repositorio.git
 
+Bash
+
+git clone https://github.com/cristian-miranda-ben/eval_final_mod4.git
 Abrir en Android Studio:
 
 Abre Android Studio y selecciona File -> Open.
@@ -40,11 +49,10 @@ Navega a la carpeta donde clonaste el proyecto y haz clic en OK.
 
 Sincronizar Gradle:
 
-Android Studio debería iniciar una sincronización de Gradle de forma automática para descargar las dependencias. Si no lo hace, haz clic en el botón "Sync Project with Gradle Files"  en la barra de herramientas.
+Espera a que Android Studio sincronice las dependencias de Gradle automáticamente. Si no lo hace, haz clic en el botón "Sync Project with Gradle Files" .
 
-Ejecutar en un emulador o dispositivo físico:
+Ejecutar:
 
-Conecta un dispositivo Android por USB o crea un emulador de Android.
+Conecta un dispositivo Android por USB o selecciona un emulador.
 
-Haz clic en el botón "Run"  (el ícono del triángulo verde) en la barra de herramientas para compilar e instalar la aplicación en el dispositivo o emulador seleccionado.
-
+Haz clic en el botón "Run"  para compilar e instalar la aplicación.
