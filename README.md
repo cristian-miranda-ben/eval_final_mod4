@@ -42,9 +42,8 @@ Para correr el proyecto, necesitas tener Android Studio instalado.
 
 Clonar el repositorio:
 
-Bash
-
 git clone https://github.com/cristian-miranda-ben/eval_final_mod4.git
+
 Abrir en Android Studio:
 
 Abre Android Studio y selecciona File -> Open.
