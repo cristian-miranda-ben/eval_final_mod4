@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/librosfragment"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Libros" />
+    <item
+        android:id="@+id/descripcionfragment"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Descripcion" />
+    <item
+        android:id="@+id/carritofragment"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Carrito" />
+</menu>

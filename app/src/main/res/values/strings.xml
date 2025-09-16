@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">eval_final_mod4</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="carrito_fragment">Carrito de Compras</string>
+    <string name="carrito_fragment_cantidad_lista">0 Items </string>
+    <string name="descripcion_imagen">descripcion imagen</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="descripcion_completa_del_libro">Todavia no se ha seleccionado un LIBRO \n Descripción completa del libro.</string>
+    <string name="total_precio">Total: $ %d</string>
+    <string name="total_libros">Total de libros: %d</string>
+</resources>

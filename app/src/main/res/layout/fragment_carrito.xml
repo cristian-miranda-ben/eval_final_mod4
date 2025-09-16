@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/carritofragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CarritoFragment">
+
+    <TextView
+        android:id="@+id/tv_nombre_carrito"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:textSize="30sp"
+        android:text="@string/carrito_fragment"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_cantidad_carrito"
+        android:layout_width="0dp"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/carrito_fragment_cantidad_lista"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/tv_nombre_carrito"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_total_carrito"
+        android:layout_width="0dp"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="Total: $ 1000"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/tv_cantidad_carrito"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recicladorcarrito"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_total_carrito" app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/item_libro_carrito" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
