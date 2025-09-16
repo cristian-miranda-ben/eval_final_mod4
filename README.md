@@ -1,5 +1,9 @@
 evaluacion final mod 4
+
+
 App de Libros
+
+
 Una aplicación móvil desarrollada en Android Studio que simula una tienda de libros. Permite a los usuarios navegar por un catálogo, ver descripciones detalladas y agregar libros a un carrito de compras virtual.
 
 ## Características de la aplicación 📖
